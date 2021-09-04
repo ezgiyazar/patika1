@@ -1,0 +1,15 @@
+def flatten(alist):
+    containlist = True
+    while(containlist):
+        containlist = False
+        newlist = []
+        for item in alist:
+            if isinstance(item, list):
+                containlist = True
+                newlist += item
+            else:
+                newlist.append(item)
+        alist = newlist.copy()   
+        
+    return alist    
+    
